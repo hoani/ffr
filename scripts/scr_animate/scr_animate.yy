@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_animate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_animate",
+  "parent":{
+    "name":"utilities",
+    "path":"folders/Scripts/utilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

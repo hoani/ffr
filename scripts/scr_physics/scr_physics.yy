@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_physics",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_physics",
+  "parent":{
+    "name":"platform",
+    "path":"folders/Scripts/platform.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
