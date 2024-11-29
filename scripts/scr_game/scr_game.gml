@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-#macro WINDOW_SCALE 2
+#macro WINDOW_SCALE 1
 
 #macro STATE_CUTSCENE 0
 #macro STATE_PLAY 1
