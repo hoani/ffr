@@ -9,7 +9,7 @@
   "bitRate":16,
   "compression":0,
   "conversionMode":0,
-  "duration":0.222494,
+  "duration":1.152,
   "name":"snd_victory0_hoani",
   "parent":{
     "name":"hoani",
@@ -19,10 +19,10 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":5512,
-  "soundFile":"snd_victory0_hoani.wav",
+  "soundFile":"snd_victory0_hoani.mp3",
   "tags":[
     "sfx",
   ],
   "type":0,
-  "volume":0.0,
+  "volume":1.0,
 }

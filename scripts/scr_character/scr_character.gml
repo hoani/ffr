@@ -36,7 +36,25 @@ function characters_init(){
 		array_push(global.c, {
 			spr: init_character_sprites(_i),
 			stats: init_character_stats(_i),
-			snd: init_character_stats(_i),
+			snd: init_character_snd(_i),
 		})
+	}
+}
+
+
+function snd_name(_which){
+	switch _which {
+		case C_HOANI:
+			return snd_name_hoani
+		case C_BUCKET:
+			return snd_name_bucket
+		case C_WIZARD:
+			return snd_name_wizard
+		case C_KITSUNE:
+			return snd_name_kitsune
+		case C_BONE:
+			return snd_name_bone
+		case C_SKELLETREX:
+			return snd_name_skelletrex
 	}
 }

@@ -22,13 +22,13 @@ if cmd1_pressed(CMD_DOWN) {
 
 switch image_index {
 	case SELECT_STORYMODE:
-		if commands_continue_check() {
+		if commands_continue_check() && state.mono > 16 {
 			set_singleplayer()
 			gamestate_set(STATE_SELECT)
 		}
 	break;
 	case SELECT_MULTIPLAYER:
-		if commands_continue_check() {
+		if commands_continue_check() && state.mono > 16 {
 			set_multiplayer()
 			gamestate_set(STATE_SELECT)
 		}

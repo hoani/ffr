@@ -13,6 +13,18 @@ function spr_p1() {
 	return p1().spr
 }
 
+function snd_p1_name() {
+	return snd_name(global.p1)
+}
+
+function p1_select_next() {
+	global.p1 = p_get_next(global.p1)
+}
+
+function p1_select_prev() {
+	global.p1 = p_get_prev(global.p1)
+}
+
 
 function p2() {
 	return global.c[global.p2]
@@ -22,12 +34,8 @@ function spr_p2() {
 	return p2().spr
 }
 
-function p1_select_next() {
-	global.p1 = p_get_next(global.p1)
-}
-
-function p1_select_prev() {
-	global.p1 = p_get_prev(global.p1)
+function snd_p2_name() {
+	return snd_name(global.p2)
 }
 
 function p2_select_next() {

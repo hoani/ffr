@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited()
 
-if state.current != TITLE_IDLE {
+if gamestate() != TITLE_IDLE {
 	return
 }
 
@@ -22,4 +22,8 @@ if !global.singleplayer {
 	if cmd2_pressed(CMD_DOWN) || cmd2_pressed(CMD_BACK) {
 		p2_select_prev()
 	}
+}
+
+if commands_continue_check() && state.mono > 16 {
+	gamestate_set(STATE_FACEOFF)
 }

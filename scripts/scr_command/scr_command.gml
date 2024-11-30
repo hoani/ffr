@@ -27,7 +27,7 @@ function commands_continue_check() {
 	gamepad_button_check_pressed(0, gp_face3) || 
 	gamepad_button_check_pressed(0, gp_face4)
 	);
-	return _gp_input || keyboard_check(vk_enter) || keyboard_check(vk_space);	
+	return _gp_input || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);	
 }
 	
 
