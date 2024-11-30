@@ -18,11 +18,3 @@ function state_update(_state) {
 	_state.step += global.s
 	_state.mono++
 }
-
-function gamestate() {
-	return global.state.current	
-}
-
-function gamestate_set(_val) {
-	return state_set(global.state, _val)	
-}

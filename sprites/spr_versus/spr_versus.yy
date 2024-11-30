@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"title",
-    "path":"folders/Sprites/game/title.yy",
+    "name":"2_faceoff",
+    "path":"folders/Sprites/2_faceoff.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

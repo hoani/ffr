@@ -4,10 +4,13 @@
 
 #macro WINDOW_SCALE 1
 
-#macro STATE_CUTSCENE 0
-#macro STATE_PLAY 1
-#macro STATE_PAUSE 2
-
+#macro STATE_TITLE 0
+#macro STATE_SELECT 1
+#macro STATE_FACEOFF 2
+#macro STATE_COMBAT 3
+#macro STATE_WINNER 4
+#macro STATE_CONTINUE 5
+#macro STATE_GAME_COMPLETE 6
 
 function game_init(){
 	if os_browser == browser_not_a_browser {
@@ -16,9 +19,32 @@ function game_init(){
 	
 	debug_init()
 	gamespeed_init()
-	global.state = new_state(STATE_CUTSCENE)
+	global.state = new_state(STATE_TITLE)
 	global.step = 0
 	global.mono = 0
+	global.singleplayer = true
 	
 	audio_init()
+	
+	characters_init()
+	player_init()
+}
+
+function gamestate() {
+	return global.state.current	
+}
+
+function gamestate_set(_val) {
+	return state_set(global.state, _val)	
+}
+
+function set_singleplayer() {
+	global.singleplayer = true
+	commands_register_single_player(global.cmd1)
+}
+
+function set_multiplayer() {
+	global.singleplayer = false
+	commands_register_player_one(global.cmd1)
+	commands_register_player_two(global.cmd2)
 }

@@ -26,7 +26,7 @@
   ],
   "name":"spr_damage_high_hoani",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"hoani",
     "path":"folders/Sprites/character/hoani.yy",
@@ -87,7 +87,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":320,
     "yorigin":0,
   },
   "swatchColours":null,

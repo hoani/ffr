@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"title",
-    "path":"folders/Sprites/game/title.yy",
+    "name":"5_continue",
+    "path":"folders/Sprites/5_continue.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

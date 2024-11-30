@@ -1,6 +1,17 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+#macro FRAMES_IDLE 8
+#macro FRAMES_FACEOFF 4 
+#macro FRAMES_VICTORY 4
+#macro FRAMES_DEFEATED 1
+#macro FRAMES_ATTACK_IN 8
+#macro FRAMES_ATTACK_OUT 8
+#macro FRAMES_MISSED 8
+#macro FRAMES_BLOCK 4
+#macro FRAMES_DAMAGED 4
+#macro FRAMES_FALL 4
+
 function init_character_sprites(_which) {
 	switch _which {
 		case C_HOANI:

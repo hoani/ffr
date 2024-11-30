@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"title",
-    "path":"folders/Sprites/game/title.yy",
+    "name":"4_victory",
+    "path":"folders/Sprites/4_victory.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

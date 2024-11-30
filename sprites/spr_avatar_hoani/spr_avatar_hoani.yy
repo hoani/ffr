@@ -23,7 +23,7 @@
   ],
   "name":"spr_avatar_hoani",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"hoani",
     "path":"folders/Sprites/character/hoani.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":284,
     "yorigin":0,
   },
   "swatchColours":null,

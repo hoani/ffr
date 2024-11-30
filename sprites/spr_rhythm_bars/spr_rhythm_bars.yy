@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"title",
-    "path":"folders/Sprites/game/title.yy",
+    "name":"3_combat",
+    "path":"folders/Sprites/3_combat.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -29,7 +29,7 @@
 
 
 
-function init_characters(){
+function characters_init(){
 	global.c = []
 	
 	for (var _i = 0; _i < C_TOTAL; _i++) {
