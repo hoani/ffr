@@ -40,22 +40,22 @@ function p2_select_prev() {
 
 function p_get_next(_p) {
 	_p++ 
-	if _p == C_SKELLETREX {
-		_p++	
-	}
 	if _p >= C_TOTAL {
 		_p -= C_TOTAL
+	}
+	if _p == C_SKELLETREX && global.singleplayer {
+		_p = p_get_next(_p)	
 	}
 	return _p
 }
 
 function p_get_prev(_p) {
 	_p--
-	if _p == C_SKELLETREX {
-		_p--	
-	}
 	if _p < 0 {
 		_p += C_TOTAL
+	}
+	if _p == C_SKELLETREX && global.singleplayer {
+		_p = p_get_prev(_p)	
 	}
 	return _p
 }

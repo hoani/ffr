@@ -34,9 +34,9 @@ function characters_init(){
 	
 	for (var _i = 0; _i < C_TOTAL; _i++) {
 		array_push(global.c, {
-			spr: init_character_sprites(C_HOANI),
-			stats: init_character_stats(C_HOANI),
-			snd: init_character_stats(C_HOANI),
+			spr: init_character_sprites(_i),
+			stats: init_character_stats(_i),
+			snd: init_character_stats(_i),
 		})
 	}
 }

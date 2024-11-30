@@ -60,7 +60,19 @@ function commands_init() {
 	return _cmds
 }
 
+function commands_reset_registered(_cmds) {
+	_cmds.checks = {
+			CMD_BACK: [],
+			CMD_FORWARD: [],
+			CMD_UP: [],
+			CMD_DOWN: [],
+	}
+}
+
 function commands_register_single_player(_cmds) {
+	
+	commands_reset_registered(_cmds)
+	
 	commands_register_player_one(_cmds)
 	
 	commands_register(_cmds, CMD_FORWARD, function(){return keyboard_check(vk_right)});
@@ -71,6 +83,8 @@ function commands_register_single_player(_cmds) {
 }
 
 function commands_register_player_one(_cmds) {
+	commands_reset_registered(_cmds)
+	
 	commands_register(_cmds, CMD_BACK, function(){return keyboard_check(WASD_LEFT)});
 	commands_register(_cmds, CMD_BACK, function(){return keyboard_check(ZQSD_LEFT)});
 	
@@ -83,6 +97,8 @@ function commands_register_player_one(_cmds) {
 }
 
 function commands_register_player_two(_cmds) {
+	commands_reset_registered(_cmds)
+	
 	commands_register(_cmds, CMD_BACK, function(){return keyboard_check(vk_right)});
 	commands_register(_cmds, CMD_FORWARD, function(){return keyboard_check(vk_left)})
 	commands_register(_cmds, CMD_UP, function(){return keyboard_check(vk_up)})

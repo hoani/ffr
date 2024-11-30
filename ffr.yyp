@@ -253,6 +253,7 @@
     {"id":{"name":"spr_rhythm_bars","path":"sprites/spr_rhythm_bars/spr_rhythm_bars.yy",},},
     {"id":{"name":"spr_select","path":"sprites/spr_select/spr_select.yy",},},
     {"id":{"name":"spr_splash_text","path":"sprites/spr_splash_text/spr_splash_text.yy",},},
+    {"id":{"name":"spr_stats","path":"sprites/spr_stats/spr_stats.yy",},},
     {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},},
     {"id":{"name":"spr_versus","path":"sprites/spr_versus/spr_versus.yy",},},
     {"id":{"name":"spr_victory_bone","path":"sprites/spr_victory_bone/spr_victory_bone.yy",},},
