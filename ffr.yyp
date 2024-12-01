@@ -197,6 +197,7 @@
     {"id":{"name":"spr_avatar_kitsune","path":"sprites/spr_avatar_kitsune/spr_avatar_kitsune.yy",},},
     {"id":{"name":"spr_avatar_skelletrex","path":"sprites/spr_avatar_skelletrex/spr_avatar_skelletrex.yy",},},
     {"id":{"name":"spr_avatar_wizard","path":"sprites/spr_avatar_wizard/spr_avatar_wizard.yy",},},
+    {"id":{"name":"spr_background_cool","path":"sprites/spr_background_cool/spr_background_cool.yy",},},
     {"id":{"name":"spr_block_high_bone","path":"sprites/spr_block_high_bone/spr_block_high_bone.yy",},},
     {"id":{"name":"spr_block_high_bucket","path":"sprites/spr_block_high_bucket/spr_block_high_bucket.yy",},},
     {"id":{"name":"spr_block_high_hoani","path":"sprites/spr_block_high_hoani/spr_block_high_hoani.yy",},},

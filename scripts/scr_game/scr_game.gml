@@ -45,6 +45,8 @@ function gamestate_set(_val) {
 				f2 = new_fighter(global.p2)
 			}
 		break;
+		default:
+			break;
 	}
 }
 
