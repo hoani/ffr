@@ -6,6 +6,10 @@ if state.current != TITLE_IDLE {
 	return
 }
 
+if state.mono == 30 {
+	create_sfx(snd_fight_fight_revolution)
+}
+
 if cmd1_pressed(CMD_UP) {
 	image_index--
 	if image_index < 0 {

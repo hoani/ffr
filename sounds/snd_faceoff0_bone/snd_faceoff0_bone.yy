@@ -7,9 +7,9 @@
   },
   "bitDepth":0,
   "bitRate":16,
-  "compression":0,
+  "compression":1,
   "conversionMode":0,
-  "duration":0.222494,
+  "duration":3.332063,
   "name":"snd_faceoff0_bone",
   "parent":{
     "name":"bone",
@@ -18,11 +18,11 @@
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
-  "sampleRate":5512,
+  "sampleRate":44100,
   "soundFile":"snd_faceoff0_bone.wav",
   "tags":[
     "sfx",
   ],
   "type":0,
-  "volume":0.0,
+  "volume":1.0,
 }

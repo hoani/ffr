@@ -42,7 +42,7 @@ switch faceoff.current {
 		faceoff_sound_update(p1().snd.faceoff[taunt1_index].audio, FACEOFF_TAUNT2)
 		break
 	case FACEOFF_TAUNT2:
-		faceoff_sound_update(p1().snd.faceoff[taunt2_index].audio, FACEOFF_END)
+		faceoff_sound_update(p2().snd.faceoff[taunt2_index].audio, FACEOFF_END)
 		break
 	case FACEOFF_END:
 		if faceoff.mono > 30 {

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.744,
+  "duration":1.170612,
   "name":"snd_wins",
   "parent":{
     "name":"announcer",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_wins.mp3",
+  "soundFile":"snd_wins.wav",
   "type":0,
   "volume":1.0,
 }

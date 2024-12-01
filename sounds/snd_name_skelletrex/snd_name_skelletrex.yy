@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.032,
+  "duration":1.826304,
   "name":"snd_name_skelletrex",
   "parent":{
     "name":"announcer",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_name_skelletrex.mp3",
+  "soundFile":"snd_name_skelletrex.wav",
   "type":0,
   "volume":1.0,
 }

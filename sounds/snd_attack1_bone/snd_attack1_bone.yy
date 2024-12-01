@@ -9,7 +9,7 @@
   "bitRate":16,
   "compression":0,
   "conversionMode":0,
-  "duration":0.222494,
+  "duration":1.927234,
   "name":"snd_attack1_bone",
   "parent":{
     "name":"bone",
@@ -18,11 +18,11 @@
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
-  "sampleRate":5512,
+  "sampleRate":44100,
   "soundFile":"snd_attack1_bone.wav",
   "tags":[
     "sfx",
   ],
   "type":0,
-  "volume":0.0,
+  "volume":1.0,
 }

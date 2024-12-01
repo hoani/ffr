@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.816,
+  "duration":1.445692,
   "name":"snd_name_kitsune",
   "parent":{
     "name":"announcer",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_name_kitsune.mp3",
+  "soundFile":"snd_name_kitsune.wav",
   "type":0,
   "volume":1.0,
 }

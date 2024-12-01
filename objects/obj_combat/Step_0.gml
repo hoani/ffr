@@ -67,10 +67,16 @@ if combat.current == COMBAT_RUNNING {
 		global.winner = PLAYER_TWO
 		state_set(combat, COMBAT_END)
 		music_fade_out(500)
+		if global.singleplayer {
+			create_sfx(snd_lose_jingle)
+		} else {
+			create_sfx(snd_win_jingle)
+		}
 	} else if f2.health <= 0 {
 		global.winner = PLAYER_ONE
 		state_set(combat, COMBAT_END)
 		music_fade_out(500)
+		create_sfx(snd_win_jingle)
 	}
 }
 	
