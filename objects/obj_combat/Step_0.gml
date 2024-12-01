@@ -37,6 +37,8 @@ switch combat.current {
 		fighter_command_update(f1, global.cmd1);
 		if !global.singleplayer {
 			fighter_command_update(f2, global.cmd2);
+		} else {
+			fighter_signal_control(f2, get_ai_command(ai))
 		}
 		
 		break	

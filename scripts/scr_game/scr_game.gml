@@ -43,6 +43,7 @@ function gamestate_set(_val) {
 			with(obj_combat) {
 				f1 = new_fighter(global.p1)
 				f2 = new_fighter(global.p2)
+				ai = new_ai(f1, f2, 0.25)
 			}
 		break;
 		default:

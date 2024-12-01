@@ -177,6 +177,9 @@ function fighter_parry_check(_f1, _f2) {
 	var _frac = 1;
 	switch _f2.state.current {
 		case FIGHT_HATK_START:
+			if _f1.state.current != FIGHT_HBLK {
+				return SIG_NONE;
+			}
 			_frac = _f2.state.step * get_attack_speed(_s2.high.spd)
 			
 			if (1 - _frac) < get_parry_portion(_s1.defense) {  
@@ -184,6 +187,9 @@ function fighter_parry_check(_f1, _f2) {
 			}
 			break;
 		case FIGHT_LATK_START:
+			if _f1.state.current != FIGHT_LBLK {
+				return SIG_NONE;
+			}
 			_frac = _f2.state.step * get_attack_speed(_s2.low.spd)
 			
 			if (1 - _frac) < get_parry_portion(_s1.defense) {  
@@ -251,11 +257,17 @@ function fighter_signal_control(_f, _which) {
 }
 
 function fighter_signal_damage_high(_f, _which) {
+	if _f.state.current == FIGHT_HBLK {
+		return;
+	}
 	state_set(_f.state, FIGHT_HDMG)
 	fighter_apply_damage(_f, _which)
 }
 
 function fighter_signal_damage_low(_f, _which) {
+	if _f.state.current == FIGHT_LBLK {
+		return;
+	}
 	state_set(_f.state, FIGHT_LDMG)
 	fighter_apply_damage(_f, _which)
 }
@@ -370,6 +382,40 @@ function fighter_foreground(_f) {
 	}
 	return true
 }
+
+
+function fighter_attacking(_f) {
+	switch _f.state.current {
+		case FIGHT_HATK_START:
+		case FIGHT_LATK_START:	  	  
+			return true
+	}
+	return false
+}
+
+function fighter_blocking(_f) {
+	switch _f.state.current {
+		case FIGHT_HBLK:
+		case FIGHT_LBLK:	  	  
+			return true
+	}
+	return false
+}
+
+function fighter_attacking_portion(_f) {
+	var _s = global.c[_f.which].stats;
+	switch _f.state.current {
+		case FIGHT_HATK_START:
+			return _f.state.step * get_attack_speed(_s.high.spd)
+		case FIGHT_LATK_START:
+			return _f.state.step * get_attack_speed(_s.high.spd)
+	}
+	return 0
+}
+
+
+
+
 
 function copy_paste_switch(_f) {
 	switch _f.state.current {
