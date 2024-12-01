@@ -11,26 +11,29 @@ if state.current != TITLE_IDLE {
 state_update(combat)
 
 
-function combat_sound_update(_snd, _next) {
+function combat_intro_update() {
 	if combat.mono < 15 {
 		return
 	}
 	if snd == -1 {
-		snd = sfx_play(sfx, _snd)
+		snd = sfx_play(sfx, snd_ready_fight)
 	} else if !audio_is_playing(snd) {
-		state_set(combat, _next)
+		state_set(combat, COMBAT_RUNNING)
 		snd = -1
+		if global.singleplayer || irandom(1) == 0 {
+			music_start(p2().snd.music)
+		} else {
+			music_start(p1().snd.music)	
+		}
 	}
 }
 
 
 switch combat.current {
 	case COMBAT_START:
-		combat_sound_update(snd_ready_fight, COMBAT_RUNNING)
+		combat_intro_update()
 		break
 	case COMBAT_RUNNING:
-		// TODO: accept commands
-		// TODO: Look for win condition
 		fighter_command_update(f1, global.cmd1);
 		if !global.singleplayer {
 			fighter_command_update(f2, global.cmd2);
@@ -63,9 +66,11 @@ if combat.current == COMBAT_RUNNING {
 	if f1.health <= 0 {
 		global.winner = PLAYER_TWO
 		state_set(combat, COMBAT_END)
+		music_fade_out(500)
 	} else if f2.health <= 0 {
 		global.winner = PLAYER_ONE
 		state_set(combat, COMBAT_END)
+		music_fade_out(500)
 	}
 }
 	

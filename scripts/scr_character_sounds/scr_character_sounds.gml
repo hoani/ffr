@@ -37,6 +37,7 @@ function init_character_snd(_which) {
 					snd_damage0_hoani,
 					snd_damage1_hoani,
 				],
+				music: snd_music_hoani,
 			}
 		case C_BUCKET:
 		return {
@@ -72,6 +73,7 @@ function init_character_snd(_which) {
 					snd_damage0_bucket,
 					snd_damage1_bucket,
 				],
+				music: snd_music_bucket,
 			}
 		case C_WIZARD:
 		return {
@@ -107,6 +109,7 @@ function init_character_snd(_which) {
 					snd_damage0_wizard,
 					snd_damage1_wizard,
 				],
+				music: snd_music_wizard,
 			}
 		case C_KITSUNE:
 		return {
@@ -142,6 +145,7 @@ function init_character_snd(_which) {
 					snd_damage0_kitsune,
 					snd_damage1_kitsune,
 				],
+				music: snd_music_kitsune,
 			}
 		case C_BONE:
 		return {
@@ -177,6 +181,7 @@ function init_character_snd(_which) {
 					snd_damage0_bone,
 					snd_damage1_bone,
 				],
+				music: snd_music_bone,
 			}
 		case C_SKELLETREX:
 		return {
@@ -212,6 +217,7 @@ function init_character_snd(_which) {
 					snd_damage0_skelletrex,
 					snd_damage1_skelletrex,
 				],
+				music: snd_music_skelletrex,
 			}
 	}
 }

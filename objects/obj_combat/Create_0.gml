@@ -17,5 +17,7 @@ snd = -1
 f1 = new_fighter(global.p1)
 f2 = new_fighter(global.p2)
 
+track = -1
+
 
 
