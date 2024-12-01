@@ -29,6 +29,7 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"active_state","filters":[],"listItems":[],"multiselect":false,"name":"active_state","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"STATE_TITLE","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"fade_in","filters":[],"listItems":[],"multiselect":false,"name":"fade_in","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"fade_out","filters":[],"listItems":[],"multiselect":false,"name":"fade_out","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

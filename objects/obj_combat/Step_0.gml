@@ -4,8 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-if state.current != TITLE_IDLE || state.mono < 30 {
-	return
+if state.current != TITLE_IDLE {
+	return	
 }
 
 state_update(combat)
@@ -38,7 +38,7 @@ switch combat.current {
 		
 		break	
 	case COMBAT_END:
-		if combat.mono > 30 {
+		if combat.mono >= 16*4-1 {
 			combat = new_state(COMBAT_START)
 			snd = -1
 			gamestate_set(STATE_WINNER)
@@ -51,13 +51,24 @@ switch combat.current {
 var _sig1 = fighter_update(f1, f2)
 var _sig2 = fighter_update(f2, f1)
 
-if _sig1 != SIG_NONE {
-	fighter_apply_signal_to_opponent(f1, f2, _sig1)	
-}
+if combat.current == COMBAT_RUNNING {
+	if _sig1 != SIG_NONE {
+		fighter_apply_signal_to_opponent(f1, f2, _sig1)	
+	}
 
-if _sig2 != SIG_NONE {
-	fighter_apply_signal_to_opponent(f2, f1, _sig2)	
+	if _sig2 != SIG_NONE {
+		fighter_apply_signal_to_opponent(f2, f1, _sig2)	
+	}
+
+	if f1.health <= 0 {
+		global.winner = PLAYER_TWO
+		state_set(combat, COMBAT_END)
+	} else if f2.health <= 0 {
+		global.winner = PLAYER_ONE
+		state_set(combat, COMBAT_END)
+	}
 }
+	
 
 
 	

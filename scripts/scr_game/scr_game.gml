@@ -37,7 +37,19 @@ function gamestate() {
 }
 
 function gamestate_set(_val) {
-	return state_set(global.state, _val)	
+	state_set(global.state, _val)
+	switch global.state.current {
+		case STATE_COMBAT: 
+			with(obj_combat) {
+				f1 = new_fighter(global.p1)
+				f2 = new_fighter(global.p2)
+			}
+		break;
+	}
+}
+
+function gamestate_update() {
+	state_update(global.state)	
 }
 
 function set_singleplayer() {

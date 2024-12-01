@@ -18,3 +18,4 @@ f1 = new_fighter(global.p1)
 f2 = new_fighter(global.p2)
 
 
+

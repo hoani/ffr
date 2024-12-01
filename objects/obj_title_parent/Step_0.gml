@@ -22,9 +22,14 @@ switch state.current {
 		}
 		break;
 	case TITLE_END:
-		image_alpha = 1 - state.step/TITLE_FADE_PER_STEP	
+		if fade_out {
+			image_alpha = 1 - state.step/TITLE_FADE_PER_STEP	
 	
-		if image_alpha <= 0 {
+			if image_alpha <= 0 {
+				state_set(state, TITLE_HIDDEN)
+			}
+		} else {
+			image_alpha = 0
 			state_set(state, TITLE_HIDDEN)
 		}
 		break;

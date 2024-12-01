@@ -34,8 +34,8 @@ switch faceoff.current {
 	case FACEOFF_COOLDOWN:
 		if faceoff.mono > 30 {
 			state_set(faceoff, FACEOFF_TAUNT1)
-			taunt1_index = irandom(3)
-			taunt2_index = irandom(3)
+			taunt1_index = irandom(2)
+			taunt2_index = irandom(2)
 		}
 		break
 	case FACEOFF_TAUNT1:

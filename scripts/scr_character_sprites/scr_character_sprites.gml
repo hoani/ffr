@@ -21,6 +21,7 @@ function init_character_sprites(_which) {
 				faceoff: spr_faceoff_hoani,
 				victory: spr_victory_hoani,
 				defeat: spr_defeat_hoani,
+				fall: spr_fall_hoani,
 				attack: [
 					spr_attack_high_hoani,
 					spr_attack_low_hoani,
@@ -45,6 +46,7 @@ function init_character_sprites(_which) {
 				faceoff: spr_faceoff_bucket,
 				victory: spr_victory_bucket,
 				defeat: spr_defeat_bucket,
+				fall: spr_fall_bucket,
 				attack: [
 					spr_attack_high_bucket,
 					spr_attack_low_bucket,
@@ -69,6 +71,7 @@ function init_character_sprites(_which) {
 				faceoff: spr_faceoff_wizard,
 				victory: spr_victory_wizard,
 				defeat: spr_defeat_wizard,
+				fall: spr_fall_wizard,
 				attack: [
 					spr_attack_high_wizard,
 					spr_attack_low_wizard,
@@ -93,6 +96,7 @@ function init_character_sprites(_which) {
 				faceoff: spr_faceoff_kitsune,
 				victory: spr_victory_kitsune,
 				defeat: spr_defeat_kitsune,
+				fall: spr_fall_kitsune,
 				attack: [
 					spr_attack_high_kitsune,
 					spr_attack_low_kitsune,
@@ -117,6 +121,7 @@ function init_character_sprites(_which) {
 				faceoff: spr_faceoff_bone,
 				victory: spr_victory_bone,
 				defeat: spr_defeat_bone,
+				fall: spr_fall_bone,
 				attack: [
 					spr_attack_high_bone,
 					spr_attack_low_bone,
@@ -141,6 +146,7 @@ function init_character_sprites(_which) {
 				faceoff: spr_faceoff_skelletrex,
 				victory: spr_victory_skelletrex,
 				defeat: spr_defeat_skelletrex,
+				fall: spr_fall_skelletrex,
 				attack: [
 					spr_attack_high_skelletrex,
 					spr_attack_low_skelletrex,

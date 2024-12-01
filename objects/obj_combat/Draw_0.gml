@@ -12,12 +12,9 @@ if gamestate() == active_state {
 	if _f1_foreground {
 		fighter_draw(f1, 512+24, 0, draw_sprite)
 	}
-	//draw_sprite(spr_p1().idle, (state.mono/8) % 8, 512, 0)
-
-	//draw_sprite_flipped(spr_p2().idle, ((state.mono/8) + 4) % 8, 769, 0)
 	
 	draw_text(100, 100, string(f1.health));
-		draw_text(1000, 100, string(f2.health));
+	draw_text(1000, 100, string(f2.health));
 
 }
 

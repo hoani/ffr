@@ -12,6 +12,7 @@
 #macro FIGHT_LDMG 8
 #macro FIGHT_HMISS 9
 #macro FIGHT_LMISS 10
+#macro FIGHT_FALL 11
 
 #macro SIG_NONE -1
 #macro SIG_HATK 0
@@ -163,6 +164,8 @@ function fighter_update(_f, _other) {
 				state_set(_f.state, FIGHT_IDLE);
 			}
 			break;
+		case FIGHT_FALL:
+			break;
 	}
 	return SIG_NONE;
 }
@@ -215,6 +218,8 @@ function fighter_image_index(_f) {
 			return animate(0, FRAMES_MISSED, get_missed_frame_speed(_s.high.rec), _f.state.step);
 		case FIGHT_LMISS:	  
 			return animate(0, FRAMES_MISSED, get_missed_frame_speed(_s.low.rec), _f.state.step);
+		case FIGHT_FALL:
+			return animate(0, FRAMES_FALL, 16, _f.state.step)
 	}
 							  
 }
@@ -246,13 +251,13 @@ function fighter_signal_control(_f, _which) {
 }
 
 function fighter_signal_damage_high(_f, _which) {
-	fighter_apply_damage(_f, _which)
 	state_set(_f.state, FIGHT_HDMG)
+	fighter_apply_damage(_f, _which)
 }
 
 function fighter_signal_damage_low(_f, _which) {
-	fighter_apply_damage(_f, _which)
 	state_set(_f.state, FIGHT_LDMG)
+	fighter_apply_damage(_f, _which)
 }
 
 function fighter_signal_missed_high(_f, _which) {
@@ -279,6 +284,10 @@ function fighter_apply_damage(_f, _which) {
 		default:
 			return;
 	}
+	if _f.health <= 0 {
+		_f.health = 0;
+		state_set(_f.state, FIGHT_FALL)
+	}	
 }
 
 function fighter_apply_signal_to_opponent(_f1, _f2, _sig) {
@@ -331,6 +340,9 @@ function fighter_draw(_f, _x, _y, _draw) {
 			break;
 		case FIGHT_LMISS:
 			_draw(_spr.missed[A_LOW], _img, _x, _y)
+			break;
+		case FIGHT_FALL:
+			_draw(_spr.fall, _img, _x, _y)
 			break;
 	}
 }
