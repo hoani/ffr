@@ -27,3 +27,7 @@ if !global.singleplayer {
 if commands_continue_check() && state.mono > 16 {
 	gamestate_set(STATE_FACEOFF)
 }
+
+if commands_back_check() && state.mono > 16 {
+	gamestate_set(STATE_TITLE)
+}

@@ -26,7 +26,7 @@
   ],
   "name":"spr_faceoff_bucket",
   "nineSlice":null,
-  "origin":1,
+  "origin":9,
   "parent":{
     "name":"bucket",
     "path":"folders/Sprites/character/bucket.yy",
@@ -88,7 +88,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":320,
-    "yorigin":0,
+    "yorigin":-48,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

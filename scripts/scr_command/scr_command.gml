@@ -29,6 +29,14 @@ function commands_continue_check() {
 	);
 	return _gp_input || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);	
 }
+
+function commands_back_check() {
+	var _gp_input = gamepad_is_supported() && gamepad_is_connected(0) && (
+	gamepad_button_check_pressed(0, gp_shoulderl) || 
+	gamepad_button_check_pressed(0, gp_shoulderlb) 
+	);
+	return _gp_input || keyboard_check_pressed(vk_escape) || keyboard_check_pressed(vk_backspace);	
+}
 	
 
 

@@ -9,8 +9,9 @@ ehthumbs_vista.db
 # Dump file
 *.stackdump
 
-## Have not not commit all wav files while this repo is public.
-*.wav
+## Have not not commit purchased wav files while this repo is public.
+*music*.wav
+*jingle*.wav
  
 # Folder config file
 [Dd]esktop.ini
