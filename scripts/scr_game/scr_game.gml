@@ -10,7 +10,7 @@
 #macro STATE_COMBAT 3
 #macro STATE_WINNER 4
 #macro STATE_CONTINUE 5
-#macro STATE_GAME_COMPLETE 6
+#macro STATE_ENDING 6
 
 function game_init(){
 	if os_browser == browser_not_a_browser {
@@ -23,6 +23,7 @@ function game_init(){
 	global.step = 0
 	global.mono = 0
 	global.singleplayer = true
+	global.enemy_index = 0
 	
 	audio_init()
 	
@@ -39,13 +40,16 @@ function gamestate() {
 function gamestate_set(_val) {
 	state_set(global.state, _val)
 	switch global.state.current {
+		case STATE_FACEOFF:
+			global.p2 = global.enemy_index
+			break;
 		case STATE_COMBAT: 
 			with(obj_combat) {
 				f1 = new_fighter(global.p1)
 				f2 = new_fighter(global.p2)
-				ai = new_ai(f1, f2, 0.25)
+				ai = new_ai(f1, f2, 0.25 + global.enemy_index*3/32)
 			}
-		break;
+			break;
 		default:
 			break;
 	}
@@ -57,6 +61,7 @@ function gamestate_update() {
 
 function set_singleplayer() {
 	global.singleplayer = true
+	global.enemy_index = 0
 	commands_register_single_player(global.cmd1)
 }
 

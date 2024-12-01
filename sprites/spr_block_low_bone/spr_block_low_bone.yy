@@ -93,8 +93,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"bone",
+    "path":"texturegroups/bone",
   },
   "type":0,
   "VTile":false,

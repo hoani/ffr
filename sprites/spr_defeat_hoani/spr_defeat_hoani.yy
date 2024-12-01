@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"hoani",
+    "path":"texturegroups/hoani",
   },
   "type":0,
   "VTile":false,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_texture",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_texture",
+  "parent":{
+    "name":"utilities",
+    "path":"folders/Scripts/utilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -46,6 +46,8 @@ switch faceoff.current {
 		break
 	case FACEOFF_END:
 		if faceoff.mono > 30 {
+			prefetch_character(global.p1)
+			prefetch_character(global.p2)
 			faceoff = new_state(FACEOFF_NAME1)
 			snd = -1
 			taunt1_index = 0

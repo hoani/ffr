@@ -113,6 +113,7 @@
     {"id":{"name":"scr_spark","path":"scripts/scr_spark/scr_spark.yy",},},
     {"id":{"name":"scr_speed","path":"scripts/scr_speed/scr_speed.yy",},},
     {"id":{"name":"scr_state","path":"scripts/scr_state/scr_state.yy",},},
+    {"id":{"name":"scr_texture","path":"scripts/scr_texture/scr_texture.yy",},},
     {"id":{"name":"snd_attack0_bone","path":"sounds/snd_attack0_bone/snd_attack0_bone.yy",},},
     {"id":{"name":"snd_attack0_bucket","path":"sounds/snd_attack0_bucket/snd_attack0_bucket.yy",},},
     {"id":{"name":"snd_attack0_hoani","path":"sounds/snd_attack0_hoani/snd_attack0_hoani.yy",},},
@@ -302,5 +303,12 @@
   "templateType":"game",
   "TextureGroups":[
     {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"hoani","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"hoani","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"bone","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"bone","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"bucket","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"bucket","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"kitsune","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"kitsune","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"skelletrex","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"skelletrex","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"wizard","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"wizard","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"faceoff","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"faceoff","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }

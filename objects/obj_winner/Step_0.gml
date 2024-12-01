@@ -42,7 +42,20 @@ switch winner.current {
 			winner = new_state(WINNER_NAME)
 			snd = -1
 			taunt_index = 0
-			gamestate_set(STATE_SELECT)
+			if global.singleplayer {
+				global.enemy_index++
+				if global.winner == PLAYER_ONE {
+					if (global.enemy_index < C_TOTAL) {
+						gamestate_set(STATE_FACEOFF)
+					} else {
+						gamestate_set(STATE_ENDING)
+					}
+				} else {
+					gamestate_set(STATE_CONTINUE)	
+				}
+			} else {
+				gamestate_set(STATE_SELECT)
+			}
 		}
 		break
 }
