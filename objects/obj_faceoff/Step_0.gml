@@ -3,7 +3,7 @@
 event_inherited()
 
 
-if state.current != TITLE_IDLE || state.mono < 30 {
+if state.current != TITLE_IDLE || state.mono < 5 {
 	return
 }
 
@@ -53,6 +53,17 @@ switch faceoff.current {
 			gamestate_set(STATE_COMBAT)
 		}
 		break
+}
+
+if commands_continue_check() {
+	if snd != -1 {
+		audio_stop_sound(snd)
+		faceoff = new_state(FACEOFF_NAME1)
+		snd = -1
+		taunt1_index = 0
+		taunt2_index = 0	
+		gamestate_set(STATE_COMBAT)
+	}
 }
 			
 	

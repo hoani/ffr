@@ -26,6 +26,8 @@ function game_init(){
 	
 	audio_init()
 	
+	random_set_seed(current_time)
+	
 	characters_init()
 	player_init()
 }

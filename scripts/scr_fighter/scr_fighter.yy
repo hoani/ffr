@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_hp",
+  "%Name":"scr_fighter",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_hp",
+  "name":"scr_fighter",
   "parent":{
-    "name":"game",
-    "path":"folders/Scripts/game.yy",
+    "name":"combat",
+    "path":"folders/Scripts/combat.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

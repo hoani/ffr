@@ -25,21 +25,17 @@ function init_character_sprites(_which) {
 					spr_attack_high_hoani,
 					spr_attack_low_hoani,
 				],
-				attack: [
-					spr_attack_high_hoani,
-					spr_attack_low_hoani,
-				],
 				block: [
 					spr_block_high_hoani,
 					spr_block_low_hoani,
 				],
-				attack: [
-					spr_attack_high_hoani,
-					spr_attack_low_hoani,
+				damage: [
+					spr_damage_high_hoani,
+					spr_damage_low_hoani,
 				],
-				attack: [
-					spr_attack_high_hoani,
-					spr_attack_low_hoani,
+				missed: [
+					spr_miss_high_hoani,
+					spr_miss_low_hoani,
 				],
 			}
 			case C_BUCKET:
@@ -53,21 +49,17 @@ function init_character_sprites(_which) {
 					spr_attack_high_bucket,
 					spr_attack_low_bucket,
 				],
-				attack: [
-					spr_attack_high_bucket,
-					spr_attack_low_bucket,
-				],
 				block: [
 					spr_block_high_bucket,
 					spr_block_low_bucket,
 				],
-				attack: [
-					spr_attack_high_bucket,
-					spr_attack_low_bucket,
+				damage: [
+					spr_damage_high_bucket,
+					spr_damage_low_bucket,
 				],
-				attack: [
-					spr_attack_high_bucket,
-					spr_attack_low_bucket,
+				missed: [
+					spr_miss_high_bucket,
+					spr_miss_low_bucket,
 				],
 			}
 			case C_WIZARD:
@@ -81,21 +73,17 @@ function init_character_sprites(_which) {
 					spr_attack_high_wizard,
 					spr_attack_low_wizard,
 				],
-				attack: [
-					spr_attack_high_wizard,
-					spr_attack_low_wizard,
-				],
 				block: [
 					spr_block_high_wizard,
 					spr_block_low_wizard,
 				],
-				attack: [
-					spr_attack_high_wizard,
-					spr_attack_low_wizard,
+				damage: [
+					spr_damage_high_wizard,
+					spr_damage_low_wizard,
 				],
-				attack: [
-					spr_attack_high_wizard,
-					spr_attack_low_wizard,
+				missed: [
+					spr_miss_high_wizard,
+					spr_miss_low_wizard,
 				],
 			}
 			case C_KITSUNE:
@@ -109,21 +97,17 @@ function init_character_sprites(_which) {
 					spr_attack_high_kitsune,
 					spr_attack_low_kitsune,
 				],
-				attack: [
-					spr_attack_high_kitsune,
-					spr_attack_low_kitsune,
-				],
 				block: [
 					spr_block_high_kitsune,
 					spr_block_low_kitsune,
 				],
-				attack: [
-					spr_attack_high_kitsune,
-					spr_attack_low_kitsune,
+				damage: [
+					spr_damage_high_kitsune,
+					spr_damage_low_kitsune,
 				],
-				attack: [
-					spr_attack_high_kitsune,
-					spr_attack_low_kitsune,
+				missed: [
+					spr_miss_high_kitsune,
+					spr_miss_low_kitsune,
 				],
 			}
 			case C_BONE:
@@ -137,21 +121,17 @@ function init_character_sprites(_which) {
 					spr_attack_high_bone,
 					spr_attack_low_bone,
 				],
-				attack: [
-					spr_attack_high_bone,
-					spr_attack_low_bone,
-				],
 				block: [
 					spr_block_high_bone,
 					spr_block_low_bone,
 				],
-				attack: [
-					spr_attack_high_bone,
-					spr_attack_low_bone,
+				damage: [
+					spr_damage_high_bone,
+					spr_damage_low_bone,
 				],
-				attack: [
-					spr_attack_high_bone,
-					spr_attack_low_bone,
+				missed: [
+					spr_miss_high_bone,
+					spr_miss_low_bone,
 				],
 			}
 			case C_SKELLETREX:
@@ -165,21 +145,17 @@ function init_character_sprites(_which) {
 					spr_attack_high_skelletrex,
 					spr_attack_low_skelletrex,
 				],
-				attack: [
-					spr_attack_high_skelletrex,
-					spr_attack_low_skelletrex,
-				],
 				block: [
 					spr_block_high_skelletrex,
 					spr_block_low_skelletrex,
 				],
-				attack: [
-					spr_attack_high_skelletrex,
-					spr_attack_low_skelletrex,
+				damage: [
+					spr_damage_high_skelletrex,
+					spr_damage_low_skelletrex,
 				],
-				attack: [
-					spr_attack_high_skelletrex,
-					spr_attack_low_skelletrex,
+				missed: [
+					spr_miss_high_skelletrex,
+					spr_miss_low_skelletrex,
 				],
 			}
 	}
