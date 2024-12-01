@@ -23,7 +23,7 @@ function winner_sound_update(_snd, _next) {
 
 switch winner.current {
 	case WINNER_NAME:
-		winner_sound_update(snd_p1_name(), WINNER_WINS)
+		winner_sound_update(snd_name(iwinner()), WINNER_WINS)
 		break
 	case WINNER_WINS:
 		winner_sound_update(snd_wins, WINNER_COOLDOWN)
