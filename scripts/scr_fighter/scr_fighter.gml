@@ -106,6 +106,10 @@ function new_fighter(_which){
 		health_prev: 1.0,
 		snd: -1,
 		sfx: new_sfx(),
+		cloud: {
+			angle: 0,
+			index: 0,
+		}
 	}
 }
 
@@ -338,6 +342,8 @@ function fighter_apply_damage(_f, _which) {
 		default:
 			return;
 	}
+	_f.cloud.angle = random(360)
+	_f.cloud.index = irandom(sprite_get_number(spr_damage_cloud)-1)
 	var _c = global.c[_f.which]
 	fighter_sfx_play(_f, _c.snd.damage[irandom(1)])
 	if _f.health <= 0 {
@@ -399,6 +405,19 @@ function fighter_draw(_f, _x, _y, _draw) {
 			break;
 		case FIGHT_FALL:
 			_draw(_spr.fall, _img, _x, _y)
+			break;
+	}
+}
+
+function fighter_draw_damage_cloud(_f, _x) {
+	var _a = clamp(1-_f.state.mono/16, 0, 1)
+	var _s = 1+_f.state.mono/8
+	switch _f.state.current {
+		case FIGHT_HDMG:
+			draw_sprite_ext(spr_damage_cloud, _f.cloud.index, _x, 240, _s, _s, _f.cloud.angle, c_white, _a)
+			break;
+		case FIGHT_LDMG:
+			draw_sprite_ext(spr_damage_cloud, _f.cloud.index, _x, 420, _s, _s, _f.cloud.angle, c_white, _a)
 			break;
 	}
 }

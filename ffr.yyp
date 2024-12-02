@@ -235,6 +235,7 @@
     {"id":{"name":"spr_continue","path":"sprites/spr_continue/spr_continue.yy",},},
     {"id":{"name":"spr_controls","path":"sprites/spr_controls/spr_controls.yy",},},
     {"id":{"name":"spr_credits","path":"sprites/spr_credits/spr_credits.yy",},},
+    {"id":{"name":"spr_damage_cloud","path":"sprites/spr_damage_cloud/spr_damage_cloud.yy",},},
     {"id":{"name":"spr_damage_high_bone","path":"sprites/spr_damage_high_bone/spr_damage_high_bone.yy",},},
     {"id":{"name":"spr_damage_high_bucket","path":"sprites/spr_damage_high_bucket/spr_damage_high_bucket.yy",},},
     {"id":{"name":"spr_damage_high_hoani","path":"sprites/spr_damage_high_hoani/spr_damage_high_hoani.yy",},},

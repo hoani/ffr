@@ -7,10 +7,13 @@ if gamestate() == active_state {
 	
 	if !_f1_foreground {
 		fighter_draw(f1, 512+24, 0, draw_sprite)
+		fighter_draw_damage_cloud(f1, 512-32)
 	}
 	fighter_draw(f2, 769-24, 0, draw_sprite_flipped)
+	fighter_draw_damage_cloud(f2, 769+32)
 	if _f1_foreground {
 		fighter_draw(f1, 512+24, 0, draw_sprite)
+		fighter_draw_damage_cloud(f1, 512-32)
 	}
 	
 	var _w = 542;
