@@ -297,6 +297,7 @@
     {"id":{"name":"spr_stats","path":"sprites/spr_stats/spr_stats.yy",},},
     {"id":{"name":"spr_story","path":"sprites/spr_story/spr_story.yy",},},
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},},
+    {"id":{"name":"spr_thumbnail","path":"sprites/spr_thumbnail/spr_thumbnail.yy",},},
     {"id":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},},
     {"id":{"name":"spr_versus","path":"sprites/spr_versus/spr_versus.yy",},},
     {"id":{"name":"spr_victory_bone","path":"sprites/spr_victory_bone/spr_victory_bone.yy",},},
