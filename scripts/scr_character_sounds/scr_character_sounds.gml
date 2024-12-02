@@ -80,7 +80,7 @@ function init_character_snd(_which) {
 				faceoff: [
 					{
 						audio: snd_faceoff0_wizard,
-						text: "I look forward to your quarrel",
+						text: "I look forward to our quarrel",
 					},
 					{
 						audio: snd_faceoff1_wizard,

@@ -45,7 +45,7 @@
 #macro PARRY_PORTION_MED (24/64) // ~0.1s.
 #macro PARRY_PORTION_LOW (20/64) 
 
-#macro MISS_SPEED_FACTOR (1.25)
+#macro MISS_SPEED_FACTOR (0.5)
 
 function get_attack_speed(_which) {
 	switch _which {

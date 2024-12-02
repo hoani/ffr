@@ -291,6 +291,7 @@
     {"id":{"name":"spr_miss_low_skelletrex","path":"sprites/spr_miss_low_skelletrex/spr_miss_low_skelletrex.yy",},},
     {"id":{"name":"spr_miss_low_wizard","path":"sprites/spr_miss_low_wizard/spr_miss_low_wizard.yy",},},
     {"id":{"name":"spr_names","path":"sprites/spr_names/spr_names.yy",},},
+    {"id":{"name":"spr_ready_fight","path":"sprites/spr_ready_fight/spr_ready_fight.yy",},},
     {"id":{"name":"spr_select","path":"sprites/spr_select/spr_select.yy",},},
     {"id":{"name":"spr_splash_text","path":"sprites/spr_splash_text/spr_splash_text.yy",},},
     {"id":{"name":"spr_stats","path":"sprites/spr_stats/spr_stats.yy",},},

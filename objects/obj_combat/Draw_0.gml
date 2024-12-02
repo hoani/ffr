@@ -36,7 +36,26 @@ if gamestate() == active_state {
 	
 	
 	draw_rhythm_circles()
+	
+	if combat.current == COMBAT_START {
+		var _f = 48;
+		var _r = 8;
+		var _l = 48;
+		if combat.mono > _f {
+			var _a = clamp(1 - (combat.mono-_f)/_l, 0, 1)
+			var _s = 3-2*_a;
+			draw_sprite_ext(spr_ready_fight, 1, room_width/2, room_height/2 - 128, _s, _s, 0, c_white, _a)
+		}
+		if combat.mono > _r {
+			var _a = clamp(1 - (combat.mono-_r)/_l, 0, 1)
+			var _s = 2-_a;
+			draw_sprite_ext(spr_ready_fight, 0, room_width/2, room_height/2 - 128, _s, _s, 0, c_white, _a)
+		}
+		
+	}
 }
+
+
 
 
 
