@@ -6,4 +6,6 @@ commands_update(global.cmd2)
 
 gamestate_update()
 
+debug_control()
+
 

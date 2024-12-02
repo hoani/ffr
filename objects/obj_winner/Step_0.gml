@@ -39,23 +39,7 @@ switch winner.current {
 		break
 	case WINNER_END:
 		if winner.mono > 30 {
-			winner = new_state(WINNER_NAME)
-			snd = -1
-			taunt_index = 0
-			if global.singleplayer {
-				global.enemy_index++
-				if global.winner == PLAYER_ONE {
-					if (global.enemy_index < C_TOTAL) {
-						gamestate_set(STATE_FACEOFF)
-					} else {
-						gamestate_set(STATE_ENDING)
-					}
-				} else {
-					gamestate_set(STATE_CONTINUE)	
-				}
-			} else {
-				gamestate_set(STATE_SELECT)
-			}
+			winner_do_end()
 		}
 		break
 }
@@ -63,11 +47,29 @@ switch winner.current {
 if commands_continue_check() {
 	if snd != -1 {
 		audio_stop_sound(snd)
-		winner = new_state(WINNER_NAME)
-		snd = -1
-		taunt_index = 0
-		gamestate_set(STATE_SELECT)
+		winner_do_end()
 	}
+}
+
+
+function winner_do_end() {
+	winner = new_state(WINNER_NAME)
+	snd = -1
+	taunt_index = 0
+	if global.singleplayer {
+		if global.winner == PLAYER_ONE {
+			global.enemy_index++
+			if (global.enemy_index < C_TOTAL) {
+				gamestate_set(STATE_FACEOFF)
+			} else {
+				gamestate_set(STATE_ENDING)
+			}
+		} else {
+			gamestate_set(STATE_CONTINUE)
+		}
+	} else {
+		gamestate_set(STATE_SELECT)
+	}	
 }
 			
 	

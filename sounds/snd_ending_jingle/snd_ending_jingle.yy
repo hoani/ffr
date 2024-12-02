@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_ending_jingle",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":6.081224,
+  "name":"snd_ending_jingle",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_ending_jingle.wav",
+  "type":0,
+  "volume":1.0,
+}

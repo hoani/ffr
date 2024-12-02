@@ -30,14 +30,18 @@ function debug_draw() {
 #macro DEBUG_KEY_FPS_DOWN ord("O")
 #macro DEBUG_KEY_SFX_TOGGLE ord("N")
 #macro DEBUG_KEY_MUSIC_TOGGLE ord("M")
+#macro DEBUG_KEY_KILL ord("K")
 
 function debug_control() {
 	if !global.debug {
 		return
 	}
 	
-	if keyboard_check_pressed(DEBUG_KEY_PAUSE) {
-		pause_toggle()
+	if keyboard_check_pressed(DEBUG_KEY_KILL) {
+		with(obj_combat) {
+			f1.health = 0;
+			state_set(f1.state, FIGHT_FALL);
+		}
 	}
 	
 	if keyboard_check_pressed(DEBUG_KEY_FPS_UP) {

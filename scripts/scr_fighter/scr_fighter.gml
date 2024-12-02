@@ -24,16 +24,16 @@
 #macro SIG_HMISS 6
 #macro SIG_LMISS 7
 
-#macro POWER_HIGH 0.185
-#macro POWER_MED 0.15
-#macro POWER_LOW 0.125
+#macro POWER_HIGH 12/64
+#macro POWER_MED 9/64
+#macro POWER_LOW 6/64
 
 
 
 // Applies to attacks and misses
-#macro SPEED_HIGH (24/512)  // ~1/2 s
-#macro SPEED_MED  (12/512)  // ~2/3 s
-#macro SPEED_LOW  (10/512)  // ~4/5 s
+#macro SPEED_HIGH (20/512)  // ~1/2 s
+#macro SPEED_MED  (16/512)  // ~2/3 s
+#macro SPEED_LOW  (13/512)  // ~4/5 s
 
 #macro DAMAGED_SPEED  (1/32)  // ~1/2s
 
@@ -44,6 +44,8 @@
 #macro PARRY_PORTION_HIGH (28/64) 
 #macro PARRY_PORTION_MED (24/64) // ~0.1s.
 #macro PARRY_PORTION_LOW (20/64) 
+
+#macro MISS_SPEED_FACTOR (1.25)
 
 function get_attack_speed(_which) {
 	switch _which {
@@ -83,7 +85,7 @@ function get_attack_frame_speed(_which) {
 }
 
 function get_missed_speed(_which) {
-	return get_attack_speed(_which)	
+	return get_attack_speed(_which)	* MISS_SPEED_FACTOR
 }
 
 function get_missed_frame_speed(_which) {
@@ -101,13 +103,21 @@ function new_fighter(_which){
 		state: new_state(FIGHT_IDLE),
 		which: _which,
 		health: 1.0,
+		health_prev: 1.0,
 	}
 }
 
 function fighter_update(_f, _other) {
 	state_update(_f.state)
 	
-	if health == 0.0 {
+	if _f.health_prev != _f.health {
+		_f.health_prev = (15/16)*_f.health_prev + (1/16)*_f.health;
+		if _f.health_prev - _f.health < 1/256 {
+			_f.health_prev = _f.health
+		}
+	}
+	
+	if _f.health == 0.0 {
 		return SIG_NONE
 	}
 	
@@ -168,6 +178,16 @@ function fighter_update(_f, _other) {
 			break;
 	}
 	return SIG_NONE;
+}
+
+function fighter_high_attack_speed(_f) {
+	var _s = global.c[_f.which].stats;
+	return get_attack_speed(_s.high.spd);
+}
+
+function fighter_low_attack_speed(_f) {
+	var _s = global.c[_f.which].stats;
+	return get_attack_speed(_s.low.spd);
 }
 
 function fighter_parry_check(_f1, _f2) {
@@ -309,7 +329,7 @@ function fighter_apply_signal_to_opponent(_f1, _f2, _sig) {
 			fighter_signal_damage_high(_f2, _s.high.pwr)
 			return;
 		case SIG_LDMG:
-			fighter_signal_damage_low(_f2, _s.high.pwr)
+			fighter_signal_damage_low(_f2, _s.low.pwr)
 			return;
 		case SIG_HMISS:
 			state_set(_f2.state, FIGHT_HMISS);

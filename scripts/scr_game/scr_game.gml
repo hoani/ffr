@@ -41,7 +41,9 @@ function gamestate_set(_val) {
 	state_set(global.state, _val)
 	switch global.state.current {
 		case STATE_FACEOFF:
-			global.p2 = global.enemy_index
+			if global.singleplayer {
+				global.p2 = global.enemy_index
+			}
 			break;
 		case STATE_COMBAT: 
 			with(obj_combat) {

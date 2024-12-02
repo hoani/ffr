@@ -8,25 +8,25 @@ function init_character_snd(_which) {
 				faceoff: [
 					{
 						audio: snd_faceoff0_hoani,
-						text: "",
+						text: "Don't go easy on me",
 					},
 					{
 						audio: snd_faceoff1_hoani,
-						text: "",
+						text: "You're gonna lose",
 					},
 					{
 						audio: snd_faceoff2_hoani,
-						text: "",
+						text: "Try to make this a challenge for me",
 					},
 				],
 				victory: [
 					{
 						audio: snd_victory0_hoani,
-						text: "",
+						text: "Too bad, tough guy",
 					},
 					{
 						audio: snd_victory1_hoani,
-						text: "",
+						text: "You're just... not on my level",
 					},
 				],
 				attack: [
@@ -44,25 +44,25 @@ function init_character_snd(_which) {
 				faceoff: [
 					{
 						audio: snd_faceoff0_bucket,
-						text: "",
+						text: "Let's get it bro!",
 					},
 					{
 						audio: snd_faceoff1_bucket,
-						text: "",
+						text: "Baby, this is what we live for!",
 					},
 					{
 						audio: snd_faceoff2_bucket,
-						text: "",
+						text: "Let your fists do the talkin'",
 					},
 				],
 				victory: [
 					{
 						audio: snd_victory0_bucket,
-						text: "",
+						text: "The Bucket gets it done!",
 					},
 					{
 						audio: snd_victory1_bucket,
-						text: "",
+						text: "Now that's what I'm talkin' about",
 					},
 				],
 				attack: [
@@ -80,25 +80,25 @@ function init_character_snd(_which) {
 				faceoff: [
 					{
 						audio: snd_faceoff0_wizard,
-						text: "",
+						text: "I look forward to your quarrel",
 					},
 					{
 						audio: snd_faceoff1_wizard,
-						text: "",
+						text: "Prepare yourself",
 					},
 					{
 						audio: snd_faceoff2_wizard,
-						text: "",
+						text: "You must know, I do not\ntake kindly to threats",
 					},
 				],
 				victory: [
 					{
 						audio: snd_victory0_wizard,
-						text: "",
+						text: "Perhaps you will be ready to fight\nme again...in a hundred years",
 					},
 					{
 						audio: snd_victory1_wizard,
-						text: "",
+						text: "You would be wise to take your\ntraining seriously",
 					},
 				],
 				attack: [
@@ -116,25 +116,25 @@ function init_character_snd(_which) {
 				faceoff: [
 					{
 						audio: snd_faceoff0_kitsune,
-						text: "",
+						text: "I am Kitsune",
 					},
 					{
 						audio: snd_faceoff1_kitsune,
-						text: "",
+						text: "You're an... idiot aren't you?",
 					},
 					{
 						audio: snd_faceoff2_kitsune,
-						text: "",
+						text: "You're already dead",
 					},
 				],
 				victory: [
 					{
 						audio: snd_victory0_kitsune,
-						text: "",
+						text: "Good grief...",
 					},
 					{
 						audio: snd_victory1_kitsune,
-						text: "",
+						text: "See ya!",
 					},
 				],
 				attack: [
@@ -152,25 +152,25 @@ function init_character_snd(_which) {
 				faceoff: [
 					{
 						audio: snd_faceoff0_bone,
-						text: "",
+						text: "You look... weak",
 					},
 					{
 						audio: snd_faceoff1_bone,
-						text: "",
+						text: "I'm gonna rip out your spine",
 					},
 					{
 						audio: snd_faceoff2_bone,
-						text: "",
+						text: "Welcome to the bone brigade",
 					},
 				],
 				victory: [
 					{
 						audio: snd_victory0_bone,
-						text: "",
+						text: "Your bones... aren't worth stealing",
 					},
 					{
 						audio: snd_victory1_bone,
-						text: "",
+						text: "Worth my weight in bones",
 					},
 				],
 				attack: [
@@ -188,25 +188,25 @@ function init_character_snd(_which) {
 				faceoff: [
 					{
 						audio: snd_faceoff0_skelletrex,
-						text: "",
+						text: "Let's have a good fight",
 					},
 					{
 						audio: snd_faceoff1_skelletrex,
-						text: "",
+						text: "I look forward to testing\nmyself, against you.",
 					},
 					{
 						audio: snd_faceoff2_skelletrex,
-						text: "",
+						text: "You look strong.",
 					},
 				],
 				victory: [
 					{
 						audio: snd_victory0_skelletrex,
-						text: "",
+						text: "I wish you a speedy recovery",
 					},
 					{
 						audio: snd_victory1_skelletrex,
-						text: "",
+						text: "Don't give up friend...\nWe all have our bad days",
 					},
 				],
 				attack: [

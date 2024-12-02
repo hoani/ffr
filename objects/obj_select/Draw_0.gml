@@ -13,6 +13,8 @@ if state.current == active_state {
 		draw_sprite_flipped(spr_p2().faceoff, 0, 769, 96)
 		draw_sprite(spr_names, global.p2, 960, 160)
 		draw_sprite(spr_stats, global.p2, 928, 320)
+	} else {
+		draw_sprite_alpha(spr_story, 0, room_width-32, 32, image_alpha)
 	}
 }
 
