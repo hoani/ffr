@@ -69,12 +69,10 @@ function commands_init() {
 }
 
 function commands_reset_registered(_cmds) {
-	_cmds.checks = {
-			CMD_BACK: [],
-			CMD_FORWARD: [],
-			CMD_UP: [],
-			CMD_DOWN: [],
-	}
+	struct_set(_cmds.checks, CMD_BACK, [])
+	struct_set(_cmds.checks, CMD_FORWARD, [])
+	struct_set(_cmds.checks, CMD_UP, [])
+	struct_set(_cmds.checks, CMD_DOWN, [])
 }
 
 function commands_register_single_player(_cmds) {
@@ -83,34 +81,38 @@ function commands_register_single_player(_cmds) {
 	
 	commands_register_player_one(_cmds)
 	
-	commands_register(_cmds, CMD_FORWARD, function(){return keyboard_check(vk_right)});
-	commands_register(_cmds, CMD_BACK, function(){return keyboard_check(vk_left)})
-	commands_register(_cmds, CMD_UP, function(){return keyboard_check(vk_up)})
-	commands_register(_cmds, CMD_DOWN, function(){return keyboard_check(vk_down)})
+	commands_register(_cmds, CMD_FORWARD, function(_cmds){return keyboard_check(vk_right)});
+	commands_register(_cmds, CMD_BACK, function(_cmds){return keyboard_check(vk_left)})
+	commands_register(_cmds, CMD_UP, function(_cmds){return keyboard_check(vk_up)})
+	commands_register(_cmds, CMD_DOWN, function(_cmds){return keyboard_check(vk_down)})
 
 }
 
 function commands_register_player_one(_cmds) {
 	commands_reset_registered(_cmds)
 	
-	commands_register(_cmds, CMD_BACK, function(){return keyboard_check(WASD_LEFT)});
-	commands_register(_cmds, CMD_BACK, function(){return keyboard_check(ZQSD_LEFT)});
+	commands_register(_cmds, CMD_BACK, function(_cmds){return keyboard_check(WASD_LEFT)});
+	commands_register(_cmds, CMD_BACK, function(_cmds){return keyboard_check(ZQSD_LEFT)});
 	
-	commands_register(_cmds, CMD_UP, function(){return keyboard_check(WASD_UP)})
-	commands_register(_cmds, CMD_UP, function(){return keyboard_check(ZQSD_UP)})
+	commands_register(_cmds, CMD_UP, function(_cmds){return keyboard_check(WASD_UP)})
+	commands_register(_cmds, CMD_UP, function(_cmds){return keyboard_check(ZQSD_UP)})
 
-	commands_register(_cmds, CMD_FORWARD, function(){return keyboard_check(WASD_RIGHT)})
+	commands_register(_cmds, CMD_FORWARD, function(_cmds){return keyboard_check(WASD_RIGHT)})
 	
-	commands_register(_cmds, CMD_DOWN, function(){return keyboard_check(WASD_DOWN)})
+	commands_register(_cmds, CMD_DOWN, function(_cmds){return keyboard_check(WASD_DOWN)})
+	
+	commands_register_gamepad(_cmds)
 }
 
 function commands_register_player_two(_cmds) {
 	commands_reset_registered(_cmds)
 	
-	commands_register(_cmds, CMD_BACK, function(){return keyboard_check(vk_right)});
-	commands_register(_cmds, CMD_FORWARD, function(){return keyboard_check(vk_left)})
-	commands_register(_cmds, CMD_UP, function(){return keyboard_check(vk_up)})
-	commands_register(_cmds, CMD_DOWN, function(){return keyboard_check(vk_down)})
+	commands_register(_cmds, CMD_BACK, function(_cmds){return keyboard_check(vk_right)});
+	commands_register(_cmds, CMD_FORWARD, function(_cmds){return keyboard_check(vk_left)})
+	commands_register(_cmds, CMD_UP, function(_cmds){return keyboard_check(vk_up)})
+	commands_register(_cmds, CMD_DOWN, function(_cmds){return keyboard_check(vk_down)})
+	
+	commands_register_gamepad(_cmds)
 }
 
 
@@ -118,19 +120,24 @@ function has_controller(_cmds) {
 	return _cmds.gamepad != -1
 }
 
-function connect_gamepad(_cmds, _device, _index) {
+function connect_gamepad(_cmds, _device) {
 	if _cmds.gamepad != -1 {
-		if _device == _index {
-			_cmds.gamepad = _device
-		}
 		return
 	}
 	
 	_cmds.gamepad = _device
-	commands_register(_cmds, CMD_BACK, function(){return gamepad_button_check(_cmds.gamepad, gp_padl)});
-	commands_register(_cmds, CMD_FORWARD, function(){return gamepad_button_check(_cmds.gamepad, gp_padr)});
-	commands_register(_cmds, CMD_UP, function(){return gamepad_button_check(_cmds.gamepad, gp_padu)});
-	commands_register(_cmds, CMD_DOWN, function(){return gamepad_button_check(_cmds.gamepad, gp_padd)});
+	commands_register_gamepad(_cmds)
+}
+
+function commands_register_gamepad(_cmds) {
+	if _cmds.gamepad == -1 {
+		return
+	}
+	
+	commands_register(_cmds, CMD_BACK, function(_cmds){return gamepad_button_check(_cmds.gamepad, gp_padl)});
+	commands_register(_cmds, CMD_FORWARD, function(_cmds){return gamepad_button_check(_cmds.gamepad, gp_padr)});
+	commands_register(_cmds, CMD_UP, function(_cmds){return gamepad_button_check(_cmds.gamepad, gp_padu)});
+	commands_register(_cmds, CMD_DOWN, function(_cmds){return gamepad_button_check(_cmds.gamepad, gp_padd)});
 }
 
 function commands_update(_cmds) {
@@ -145,7 +152,7 @@ function commands_input_update(_cmds, _cmd) {
 	var _check = false;
 	var _checks = struct_get(_cmds.checks, _cmd);
 	for (var _i=0; _i<array_length(_checks); _i++) {
-		_check |= _checks[_i]();
+		_check |= _checks[_i](_cmds);
 	}
 	
 	var _pressed = _check && (_last != _check);	

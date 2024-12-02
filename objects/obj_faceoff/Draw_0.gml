@@ -17,11 +17,11 @@ if gamestate() == active_state {
 		var _a = clamp(1-faceoff.mono/16, 0, 1)
 		draw_taunt(p1().snd.faceoff[taunt1_index].text, 0, _a)
 		_a = 1 - _a
-		draw_taunt(p1().snd.faceoff[taunt2_index].text, 1, _a)
+		draw_taunt(p2().snd.faceoff[taunt2_index].text, 1, _a)
 	}
 	if faceoff.current == FACEOFF_END {
 		var _a = clamp(1-faceoff.mono/16, 0, 1)
-		draw_taunt(p1().snd.faceoff[taunt2_index].text, 1, _a)
+		draw_taunt(p2().snd.faceoff[taunt2_index].text, 1, _a)
 	}
 
 
