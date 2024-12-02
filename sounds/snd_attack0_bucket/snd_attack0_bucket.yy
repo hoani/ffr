@@ -9,7 +9,7 @@
   "bitRate":16,
   "compression":0,
   "conversionMode":0,
-  "duration":2.247664,
+  "duration":1.897891,
   "name":"snd_attack0_bucket",
   "parent":{
     "name":"bucket",

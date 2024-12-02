@@ -9,7 +9,7 @@
   "bitRate":16,
   "compression":0,
   "conversionMode":0,
-  "duration":1.754762,
+  "duration":0.97585,
   "name":"snd_attack0_bone",
   "parent":{
     "name":"bone",

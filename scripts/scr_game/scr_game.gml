@@ -40,6 +40,9 @@ function gamestate() {
 function gamestate_set(_val) {
 	state_set(global.state, _val)
 	switch global.state.current {
+		case STATE_TITLE:
+			commands_register_single_player(global.cmd1)
+			break;
 		case STATE_FACEOFF:
 			if global.singleplayer {
 				global.p2 = global.enemy_index

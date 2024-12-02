@@ -9,7 +9,7 @@
   "bitRate":16,
   "compression":0,
   "conversionMode":0,
-  "duration":2.461293,
+  "duration":1.823991,
   "name":"snd_attack0_skelletrex",
   "parent":{
     "name":"skelletrex",

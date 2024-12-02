@@ -37,9 +37,9 @@
 
 #macro DAMAGED_SPEED  (1/32)  // ~1/2s
 
-#macro BLOCK_SPEED_HIGH (1.25/16) 
-#macro BLOCK_SPEED_MED (1/16) // ~1/4s.
-#macro BLOCK_SPEED_LOW (0.825/16)
+#macro BLOCK_SPEED_HIGH (0.5*0.825/16) 
+#macro BLOCK_SPEED_MED (0.5*1/16) // ~1/4s.
+#macro BLOCK_SPEED_LOW (0.5*1.25/16)
 
 #macro PARRY_PORTION_HIGH (28/64) 
 #macro PARRY_PORTION_MED (24/64) // ~0.1s.
@@ -104,6 +104,8 @@ function new_fighter(_which){
 		which: _which,
 		health: 1.0,
 		health_prev: 1.0,
+		snd: -1,
+		sfx: new_sfx(),
 	}
 }
 
@@ -250,6 +252,18 @@ function fighter_image_index(_f) {
 							  
 }
 
+function fighter_sfx_stop(_f) {
+	if _f.snd != -1 {
+		audio_stop_sound(_f.snd)
+		_f.snd = -1
+	}
+}
+
+function fighter_sfx_play(_f, _snd) {
+	fighter_sfx_stop(_f)
+	_f.snd = sfx_play(_f.sfx, _snd)
+}
+
 function fighter_signal_control(_f, _which) {
 	switch _f.state.current {
 		case FIGHT_IDLE:
@@ -260,24 +274,31 @@ function fighter_signal_control(_f, _which) {
 			return;
 	}
 	
+	var _c = global.c[_f.which]
+	
 	switch _which {
 		case SIG_HATK:
 			state_set(_f.state, FIGHT_HATK_START)
+			fighter_sfx_play(_f, _c.snd.attack[0])
 			return;
 		case SIG_LATK:
 			state_set(_f.state, FIGHT_LATK_START)
+			fighter_sfx_play(_f, _c.snd.attack[1])
 			return;
 		case SIG_HBLK:
 			state_set(_f.state, FIGHT_HBLK)
+			fighter_sfx_stop(_f)
 			return;
 		case SIG_LBLK:
 			state_set(_f.state, FIGHT_LBLK)
+			fighter_sfx_stop(_f)
 			return;
 	}
 }
 
 function fighter_signal_damage_high(_f, _which) {
 	if _f.state.current == FIGHT_HBLK {
+		create_sfx(snd_hit_block)
 		return;
 	}
 	state_set(_f.state, FIGHT_HDMG)
@@ -286,6 +307,7 @@ function fighter_signal_damage_high(_f, _which) {
 
 function fighter_signal_damage_low(_f, _which) {
 	if _f.state.current == FIGHT_LBLK {
+		create_sfx(snd_hit_block)
 		return;
 	}
 	state_set(_f.state, FIGHT_LDMG)
@@ -316,10 +338,12 @@ function fighter_apply_damage(_f, _which) {
 		default:
 			return;
 	}
+	var _c = global.c[_f.which]
+	fighter_sfx_play(_f, _c.snd.damage[irandom(1)])
 	if _f.health <= 0 {
 		_f.health = 0;
 		state_set(_f.state, FIGHT_FALL)
-	}	
+	}
 }
 
 function fighter_apply_signal_to_opponent(_f1, _f2, _sig) {

@@ -163,6 +163,8 @@
     {"id":{"name":"snd_faceoff2_skelletrex","path":"sounds/snd_faceoff2_skelletrex/snd_faceoff2_skelletrex.yy",},},
     {"id":{"name":"snd_faceoff2_wizard","path":"sounds/snd_faceoff2_wizard/snd_faceoff2_wizard.yy",},},
     {"id":{"name":"snd_fight_fight_revolution","path":"sounds/snd_fight_fight_revolution/snd_fight_fight_revolution.yy",},},
+    {"id":{"name":"snd_hit_block","path":"sounds/snd_hit_block/snd_hit_block.yy",},},
+    {"id":{"name":"snd_hit","path":"sounds/snd_hit/snd_hit.yy",},},
     {"id":{"name":"snd_lose_jingle","path":"sounds/snd_lose_jingle/snd_lose_jingle.yy",},},
     {"id":{"name":"snd_music_bone","path":"sounds/snd_music_bone/snd_music_bone.yy",},},
     {"id":{"name":"snd_music_bucket","path":"sounds/snd_music_bucket/snd_music_bucket.yy",},},
